@@ -11,7 +11,7 @@ class BeaconsController {
     configure(config) {
     }
     setReferences(references) {
-        this._persistence = references.getOneRequired(new pip_services_commons_node_2.Descriptor('pip-samples-beacons', 'persistence', '*', '*', '1.0'));
+        this._persistence = references.getOneRequired(new pip_services_commons_node_2.Descriptor('beacons', 'persistence', '*', '*', '1.0'));
     }
     getBeacons(correlationId, filter, paging, callback) {
         this._persistence.getPageByFilter(correlationId, filter, paging, callback);

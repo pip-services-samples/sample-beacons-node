@@ -24,9 +24,9 @@ suite('BeaconsDirectClientV1', () => {
         client = new BeaconsDirectClientV1();
 
         let references = References.fromTuples(
-            new Descriptor('pip-samples-beacons', 'persistence', 'memory', 'default', '1.0'), persistence,
-            new Descriptor('pip-samples-beacons', 'controller', 'default', 'default', '1.0'), controller,
-            new Descriptor('pip-samples-beacons', 'client', 'direct', 'default', '1.0'), client
+            new Descriptor('beacons', 'persistence', 'memory', 'default', '1.0'), persistence,
+            new Descriptor('beacons', 'controller', 'default', 'default', '1.0'), controller,
+            new Descriptor('beacons', 'client', 'direct', 'default', '1.0'), client
         );
 
         controller.setReferences(references);

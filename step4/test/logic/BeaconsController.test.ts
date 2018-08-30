@@ -44,8 +44,8 @@ suite('BeaconsController', () => {
         controller.configure(new ConfigParams());
 
         let references = References.fromTuples(
-            new Descriptor('pip-samples-beacons', 'persistence', 'memory', 'default', '1.0'), persistence,
-            new Descriptor('pip-samples-beacons', 'controller', 'default', 'default', '1.0'), controller
+            new Descriptor('beacons', 'persistence', 'memory', 'default', '1.0'), persistence,
+            new Descriptor('beacons', 'controller', 'default', 'default', '1.0'), controller
         );
 
         controller.setReferences(references);

@@ -58,9 +58,9 @@ suite('BeaconsHttpServiceV1', () => {
         ));
 
         let references = References.fromTuples(
-            new Descriptor('pip-samples-beacons', 'persistence', 'memory', 'default', '1.0'), persistence,
-            new Descriptor('pip-samples-beacons', 'controller', 'default', 'default', '1.0'), controller,
-            new Descriptor('pip-samples-beacons', 'service', 'http', 'default', '1.0'), service
+            new Descriptor('beacons', 'persistence', 'memory', 'default', '1.0'), persistence,
+            new Descriptor('beacons', 'controller', 'default', 'default', '1.0'), controller,
+            new Descriptor('beacons', 'service', 'http', 'default', '1.0'), service
         );
 
         controller.setReferences(references);

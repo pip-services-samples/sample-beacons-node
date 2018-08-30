@@ -27,7 +27,7 @@ export class BeaconsController implements IBeaconsController, IConfigurable, IRe
 
     public setReferences(references: IReferences): void {
         this._persistence = references.getOneRequired<IBeaconsPersistence>(
-            new Descriptor('pip-samples-beacons', 'persistence', '*', '*', '1.0')
+            new Descriptor('beacons', 'persistence', '*', '*', '1.0')
         );
     }
 

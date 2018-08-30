@@ -11,7 +11,7 @@ import { IBeaconsController } from '../../../src/logic/IBeaconsController';
 export class BeaconsDirectClientV1 extends DirectClient<IBeaconsController> implements IBeaconsClientV1 {
     public constructor() {
         super();
-        this._dependencyResolver.put('controller', new Descriptor('pip-samples-beacons', 'controller', '*', '*', '1.0'));
+        this._dependencyResolver.put('controller', new Descriptor('beacons', 'controller', '*', '*', '1.0'));
     }
 
     public getBeacons(correlationId: string, filter: FilterParams, paging: PagingParams,

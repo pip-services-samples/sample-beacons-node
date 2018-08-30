@@ -35,10 +35,10 @@ suite('BeaconsHttpClientV1', () => {
         client.configure(httpConfig);
 
         let references = References.fromTuples(
-            new Descriptor('pip-samples-beacons', 'persistence', 'memory', 'default', '1.0'), persistence,
-            new Descriptor('pip-samples-beacons', 'controller', 'default', 'default', '1.0'), controller,
-            new Descriptor('pip-samples-beacons', 'service', 'http', 'default', '1.0'), service,
-            new Descriptor('pip-samples-beacons', 'client', 'http', 'default', '1.0'), client
+            new Descriptor('beacons', 'persistence', 'memory', 'default', '1.0'), persistence,
+            new Descriptor('beacons', 'controller', 'default', 'default', '1.0'), controller,
+            new Descriptor('beacons', 'service', 'http', 'default', '1.0'), service,
+            new Descriptor('beacons', 'client', 'http', 'default', '1.0'), client
         );
         controller.setReferences(references);
         service.setReferences(references);

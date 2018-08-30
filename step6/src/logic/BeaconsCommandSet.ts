@@ -8,7 +8,7 @@ import { ArraySchema } from 'pip-services-commons-node';
 import { TypeCode } from 'pip-services-commons-node';
 import { Parameters } from 'pip-services-commons-node';
 
-import { BeaconV1Schema } from '../../src/interfaces/data/version1/BeaconV1Schema';
+import { BeaconV1Schema } from '../../src/data/version1/BeaconV1Schema';
 import { IBeaconsController } from '../../src/logic/IBeaconsController';
 
 export class BeaconsCommandSet extends CommandSet {
