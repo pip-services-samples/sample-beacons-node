@@ -1,6 +1,6 @@
 import { JsonFilePersister } from 'pip-services-data-node';
 
-import { BeaconV1 } from '../interfaces/data/version1/BeaconV1';
+import { BeaconV1 } from '../data/version1/BeaconV1';
 import { BeaconsMemoryPersistence } from './BeaconsMemoryPersistence';
 import { ConfigParams } from 'pip-services-commons-node';
 

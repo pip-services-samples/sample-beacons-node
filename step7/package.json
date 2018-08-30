@@ -4,6 +4,7 @@
   "main": "./obj/src/index.js",
   "typings": "./obj/src/index.d.ts",
   "scripts": {
+    "service": "node ./bin/run.js",
     "test": "mocha -t 5000 -R spec -u tdd --recursive ./obj/test"
   },
   "dependencies": {

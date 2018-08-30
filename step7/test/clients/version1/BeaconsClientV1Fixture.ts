@@ -5,8 +5,8 @@ let assert = require('chai').assert;
 import { FilterParams } from 'pip-services-commons-node';
 import { PagingParams } from 'pip-services-commons-node';
 
-import { BeaconV1 } from '../../../src/interfaces/data/version1/BeaconV1';
-import { BeaconTypeV1 } from '../../../src/interfaces/data/version1/BeaconTypeV1';
+import { BeaconV1 } from '../../../src/data/version1/BeaconV1';
+import { BeaconTypeV1 } from '../../../src/data/version1/BeaconTypeV1';
 import { IBeaconsClientV1 } from '../../../src/clients/version1/IBeaconsClientV1';
 
 const BEACON1: BeaconV1 = {

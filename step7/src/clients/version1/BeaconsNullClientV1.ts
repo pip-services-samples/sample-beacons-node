@@ -2,7 +2,7 @@ import { FilterParams } from 'pip-services-commons-node';
 import { PagingParams } from 'pip-services-commons-node';
 import { DataPage } from 'pip-services-commons-node';
 
-import { BeaconV1 } from '../../../src/interfaces/data/version1/BeaconV1';
+import { BeaconV1 } from '../../../src/data/version1/BeaconV1';
 import { IBeaconsClientV1 } from './IBeaconsClientV1';
 
 export class BeaconsNullClientV1 implements IBeaconsClientV1 {
