@@ -7,9 +7,7 @@
         "outDir": "obj",
         "rootDir": ".",
         "sourceMap": true,
-        "types": [
-            "node", "mocha", "chai"
-        ]
+        "types": [ "node", "mocha", "chai" ]
     },
     "exclude": [
         "node_modules",

@@ -8,8 +8,8 @@ import { References } from 'pip-services-commons-node';
 import { FilterParams } from 'pip-services-commons-node';
 import { PagingParams } from 'pip-services-commons-node';
 
-import { BeaconV1 } from '../../src/interfaces/data/version1/BeaconV1';
-import { BeaconTypeV1 } from '../../src/interfaces/data/version1/BeaconTypeV1';
+import { BeaconV1 } from '../../src/data/version1/BeaconV1';
+import { BeaconTypeV1 } from '../../src/data/version1/BeaconTypeV1';
 import { BeaconsMemoryPersistence } from '../../src/persistence/BeaconsMemoryPersistence';
 import { BeaconsController } from '../../src/logic/BeaconsController';
 
@@ -235,6 +235,23 @@ suite('BeaconsController', () => {
                         assert.lengthOf(position.coordinates, 2);
                         assert.equal(0, position.coordinates[0]);
                         assert.equal(0, position.coordinates[1]);
+
+                        callback();
+                    }
+                )
+            },
+            // Calculate position for two beacons
+            (callback) => {
+                controller.calculatePosition(
+                    null, '1', ['00001', '00002'],
+                    (err, position) => {
+                        assert.isNull(err);
+
+                        assert.isObject(position);
+                        assert.equal('Point', position.type);
+                        assert.lengthOf(position.coordinates, 2);
+                        assert.equal(1, position.coordinates[0]);
+                        assert.equal(1, position.coordinates[1]);
 
                         callback();
                     }

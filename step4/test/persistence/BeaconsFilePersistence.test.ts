@@ -8,7 +8,7 @@ suite('BeaconsFilePersistence', () => {
     let fixture: BeaconsPersistenceFixture;
 
     setup((done) => {
-        persistence = new BeaconsFilePersistence('../../step1/data/beacons.test.json');
+        persistence = new BeaconsFilePersistence('data/beacons.test.json');
         persistence.configure(new ConfigParams());
 
         fixture = new BeaconsPersistenceFixture(persistence);
