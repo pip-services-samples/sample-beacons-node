@@ -1,27 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 let _ = require('lodash');
-
-import { FilterParams } from 'pip-services-commons-node';
-import { PagingParams } from 'pip-services-commons-node';
-import { DataPage } from 'pip-services-commons-node';
-
-import { IdentifiableMemoryPersistence } from 'pip-services-data-node';
-
-import { BeaconV1 } from '../data/version1/BeaconV1';
-import { IBeaconsPersistence } from './IBeaconsPersistence';
-
-export class BeaconsMemoryPersistence
-    extends IdentifiableMemoryPersistence<BeaconV1, string>
-    implements IBeaconsPersistence {
-
+const pip_services_commons_node_1 = require("pip-services-commons-node");
+const pip_services_data_node_1 = require("pip-services-data-node");
+class BeaconsMemoryPersistence extends pip_services_data_node_1.IdentifiableMemoryPersistence {
     constructor() {
         super();
-
         this._maxPageSize = 1000;
     }
-
-    private composeFilter(filter: FilterParams): any {
-        filter = filter || new FilterParams();
-
+    composeFilter(filter) {
+        filter = filter || new pip_services_commons_node_1.FilterParams();
         let id = filter.getAsNullableString('id');
         let siteId = filter.getAsNullableString('site_id');
         let label = filter.getAsNullableString('label');
@@ -31,7 +19,6 @@ export class BeaconsMemoryPersistence
             udis = udis.split(',');
         if (!_.isArray(udis))
             udis = null;
-
         return (item) => {
             if (id != null && item.id != id)
                 return false;
@@ -46,22 +33,17 @@ export class BeaconsMemoryPersistence
             return true;
         };
     }
-
-    public getPageByFilter(correlationId: string, filter: FilterParams, paging: PagingParams,
-        callback: (err: any, page: DataPage<BeaconV1>) => void): void {
+    getPageByFilter(correlationId, filter, paging, callback) {
         super.getPageByFilter(correlationId, this.composeFilter(filter), paging, null, null, callback);
     }
-
-    public getOneByUdi(correlationId: string, udi: string,
-        callback: (err: any, item: BeaconV1) => void): void {
-        
+    getOneByUdi(correlationId, udi, callback) {
         let item = _.find(this._items, (item) => item.udi == udi);
-
-        if (item != null) this._logger.trace(correlationId, "Found beacon by %s", udi);
-        else this._logger.trace(correlationId, "Cannot find beacon by %s", udi);
-
+        if (item != null)
+            this._logger.trace(correlationId, "Found beacon by %s", udi);
+        else
+            this._logger.trace(correlationId, "Cannot find beacon by %s", udi);
         callback(null, item);
     }
-
-
 }
+exports.BeaconsMemoryPersistence = BeaconsMemoryPersistence;
+//# sourceMappingURL=BeaconsMemoryPersistence.js.map
