@@ -13,11 +13,11 @@ import { IdGenerator } from 'pip-services-commons-node';
 import { CommandSet } from 'pip-services-commons-node';
 import { ICommandable } from 'pip-services-commons-node';
 
-import { BeaconV1 } from '../../src/interfaces/data/version1/BeaconV1';
+import { BeaconV1 } from '../../src/data/version1/BeaconV1';
 import { IBeaconsPersistence } from '../../src/persistence/IBeaconsPersistence';
 import { IBeaconsController } from './IBeaconsController';
-import { BeaconTypeV1 } from '../../src/interfaces/data/version1/BeaconTypeV1';
-import { BeaconsCommandSet } from '../../../step5/src/services/BeaconsCommandSet';
+import { BeaconTypeV1 } from '../../src/data/version1/BeaconTypeV1';
+import { BeaconsCommandSet } from './BeaconsCommandSet';
 
 export class BeaconsController implements IBeaconsController, IConfigurable, IReferenceable, ICommandable {
     private _persistence: IBeaconsPersistence;

@@ -9,8 +9,8 @@ import { References } from 'pip-services-commons-node';
 import { FilterParams } from 'pip-services-commons-node';
 import { PagingParams } from 'pip-services-commons-node';
 
-import { BeaconV1 } from '../../../src/interfaces/data/version1/BeaconV1';
-import { BeaconTypeV1 } from '../../../src/interfaces/data/version1/BeaconTypeV1';
+import { BeaconV1 } from '../../../src/data/version1/BeaconV1';
+import { BeaconTypeV1 } from '../../../src/data/version1/BeaconTypeV1';
 import { BeaconsMemoryPersistence } from '../../../src/persistence/BeaconsMemoryPersistence';
 import { BeaconsController } from '../../../src/logic/BeaconsController';
 import { BeaconsHttpServiceV1 } from '../../../src/services/version1/BeaconsHttpServiceV1';
