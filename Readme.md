@@ -6,7 +6,9 @@ The is simple microservice that does couple things:
 * Keeps list of beacons with their IDs and locations
 * Calculates estimated device position based on beacons it can see
 
-<center>![Detecting beacons](artifacts/beacons.png)</center>
+<p align="center">
+<img src="artifacts/beacons.png" alt="Detecting beacons">
+</p>
 
 To write the code we are going to use Pip.Services cross-language and cross-platform microservices toolkit.
 If you are insterested to learn more about Pip.Services, please,
@@ -14,7 +16,9 @@ go to [http://github.com/pip-services/pip-services](http://github.com/pip-servic
 
 The microservice has the following design
 
-<center>![Microservice design](artifacts/design.png)</center>
+<p align="center">
+<img src="artifacts/design.png" alt="Microservice design">
+</p>
 
 The implementation is divided into 8 steps:
 * [Step 1](step1): Creating project structure
