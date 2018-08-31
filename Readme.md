@@ -11,7 +11,7 @@ The is simple a microservice that does couple things:
 </p>
 
 To write the code we are going to use Pip.Services cross-language and cross-platform microservices toolkit.
-If you are insterested to learn more about Pip.Services, please,
+If you are interested to learn more about Pip.Services, please,
 go to [http://github.com/pip-services/pip-services](http://github.com/pip-services/pip-services).
 
 The microservice has the following design:
