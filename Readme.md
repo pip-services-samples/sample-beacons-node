@@ -20,15 +20,16 @@ The microservice has the following design:
 <img src="artifacts/design.png" alt="Microservice design">
 </p>
 
-The implementation is divided into 8 steps:
+The implementation is divided into 9 steps:
 * [Step 1](step1): Creating project structure
 * [Step 2](step2): Defining data objects
 * [Step 3](step3): Implementing persistence components with tests
 * [Step 4](step4): Implementing controller compomnent with tests
 * [Step 5](step5): Implementing HTTP service using command pattern
-* [Step 6](step6): Wrapping the service into container and adding management components
+* [Step 6](step6): Wrapping the service into container
 * [Step 7](step7): Implementing client SDK with tests
 * [Step 8](step8): Dockerizing the microservice
+* [Step 9](step9): Deploying to kubernetes (minikube)
 
 Happy microservice development!
 
