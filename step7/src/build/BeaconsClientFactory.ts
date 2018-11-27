@@ -1,5 +1,5 @@
-import { Factory } from 'pip-services-components-node';
-import { Descriptor } from 'pip-services-commons-node';
+import { Factory } from 'pip-services3-components-node';
+import { Descriptor } from 'pip-services3-commons-node';
 
 import { BeaconsNullClientV1 } from '../../src/clients/version1/BeaconsNullClientV1';
 import { BeaconsDirectClientV1 } from '../../src/clients/version1/BeaconsDirectClientV1';

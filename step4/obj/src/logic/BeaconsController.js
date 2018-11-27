@@ -2,16 +2,16 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 let _ = require('lodash');
 let async = require('async');
-const pip_services_commons_node_1 = require("pip-services-commons-node");
-const pip_services_commons_node_2 = require("pip-services-commons-node");
-const pip_services_commons_node_3 = require("pip-services-commons-node");
+const pip_services3_commons_node_1 = require("pip-services3-commons-node");
+const pip_services3_commons_node_2 = require("pip-services3-commons-node");
+const pip_services3_commons_node_3 = require("pip-services3-commons-node");
 const BeaconTypeV1_1 = require("../../src/data/version1/BeaconTypeV1");
 class BeaconsController {
     constructor() { }
     configure(config) {
     }
     setReferences(references) {
-        this._persistence = references.getOneRequired(new pip_services_commons_node_2.Descriptor('beacons', 'persistence', '*', '*', '1.0'));
+        this._persistence = references.getOneRequired(new pip_services3_commons_node_2.Descriptor('beacons', 'persistence', '*', '*', '1.0'));
     }
     getBeacons(correlationId, filter, paging, callback) {
         this._persistence.getPageByFilter(correlationId, filter, paging, callback);
@@ -31,7 +31,7 @@ class BeaconsController {
         }
         async.series([
             (callback) => {
-                this._persistence.getPageByFilter(correlationId, pip_services_commons_node_1.FilterParams.fromTuples('site_id', siteId, 'udis', udis), null, (err, page) => {
+                this._persistence.getPageByFilter(correlationId, pip_services3_commons_node_1.FilterParams.fromTuples('site_id', siteId, 'udis', udis), null, (err, page) => {
                     beacons = page ? page.data : [];
                     callback(err);
                 });
@@ -60,7 +60,7 @@ class BeaconsController {
         ], (err) => { callback(err, err == null ? position : null); });
     }
     createBeacon(correlationId, beacon, callback) {
-        beacon.id = beacon.id || pip_services_commons_node_3.IdGenerator.nextLong();
+        beacon.id = beacon.id || pip_services3_commons_node_3.IdGenerator.nextLong();
         beacon.type = beacon.type || BeaconTypeV1_1.BeaconTypeV1.Unknown;
         this._persistence.create(correlationId, beacon, callback);
     }

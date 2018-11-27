@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class BeaconTypeV1 {
 }
-BeaconTypeV1.Unknown = "unkown";
+BeaconTypeV1.Unknown = "unknown";
 BeaconTypeV1.AltBeacon = "altbeacon";
 BeaconTypeV1.iBeacon = "ibeacon";
 BeaconTypeV1.EddyStoneUdi = "eddystone-udi";

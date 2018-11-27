@@ -1,12 +1,12 @@
-import { CommandSet, FilterParams, PagingParams } from 'pip-services-commons-node';
-import { ICommand } from 'pip-services-commons-node';
-import { Command } from 'pip-services-commons-node';
-import { ObjectSchema } from 'pip-services-commons-node';
-import { FilterParamsSchema } from 'pip-services-commons-node';
-import { PagingParamsSchema } from 'pip-services-commons-node';
-import { ArraySchema } from 'pip-services-commons-node';
-import { TypeCode } from 'pip-services-commons-node';
-import { Parameters } from 'pip-services-commons-node';
+import { CommandSet, FilterParams, PagingParams } from 'pip-services3-commons-node';
+import { ICommand } from 'pip-services3-commons-node';
+import { Command } from 'pip-services3-commons-node';
+import { ObjectSchema } from 'pip-services3-commons-node';
+import { FilterParamsSchema } from 'pip-services3-commons-node';
+import { PagingParamsSchema } from 'pip-services3-commons-node';
+import { ArraySchema } from 'pip-services3-commons-node';
+import { TypeCode } from 'pip-services3-commons-node';
+import { Parameters } from 'pip-services3-commons-node';
 
 import { BeaconV1Schema } from '../../src/data/version1/BeaconV1Schema';
 import { IBeaconsController } from '../../src/logic/IBeaconsController';

@@ -7,12 +7,12 @@
     "test": "mocha -t 5000 -R spec -u tdd --recursive ./obj/test"
   },
   "dependencies": {
-    "pip-services-commons-node": "^3.0.*",
-    "pip-services-components-node": "^3.0.*",
-    "pip-services-container-node": "3.0.*",
-    "pip-services-data-node": "^3.0.*",
-    "pip-services-rpc-node": "^3.0.*",
-    "pip-services-mongodb-node": "^3.0.*"
+    "pip-services3-commons-node": "^3.0.*",
+    "pip-services3-components-node": "^3.0.*",
+    "pip-services3-container-node": "3.0.*",
+    "pip-services3-data-node": "^3.0.*",
+    "pip-services3-rpc-node": "^3.0.*",
+    "pip-services3-mongodb-node": "^3.0.*"
   },
   "devDependencies": {
     "@types/async": "^2.0.49",

@@ -1,4 +1,4 @@
-import { ConfigParams } from 'pip-services-commons-node';
+import { ConfigParams } from 'pip-services3-commons-node';
 
 import { BeaconsMemoryPersistence } from '../../src/persistence/BeaconsMemoryPersistence';
 import { BeaconsPersistenceFixture } from './BeaconsPersistenceFixture';

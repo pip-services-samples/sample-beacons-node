@@ -1,4 +1,4 @@
-import { CommandSet } from 'pip-services-commons-node';
+import { CommandSet } from 'pip-services3-commons-node';
 import { IBeaconsController } from './IBeaconsController';
 export declare class BeaconsCommandSet extends CommandSet {
     private _controller;

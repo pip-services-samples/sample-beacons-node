@@ -3,11 +3,11 @@ let async = require('async');
 let assert = require('chai').assert;
 let restify = require('restify');
 
-import { ConfigParams } from 'pip-services-commons-node';
-import { Descriptor } from 'pip-services-commons-node';
-import { References } from 'pip-services-commons-node';
-import { FilterParams } from 'pip-services-commons-node';
-import { PagingParams } from 'pip-services-commons-node';
+import { ConfigParams } from 'pip-services3-commons-node';
+import { Descriptor } from 'pip-services3-commons-node';
+import { References } from 'pip-services3-commons-node';
+import { FilterParams } from 'pip-services3-commons-node';
+import { PagingParams } from 'pip-services3-commons-node';
 
 import { BeaconV1 } from '../../../src/data/version1/BeaconV1';
 import { BeaconTypeV1 } from '../../../src/data/version1/BeaconTypeV1';

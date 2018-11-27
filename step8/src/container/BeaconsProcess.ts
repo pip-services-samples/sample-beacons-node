@@ -1,5 +1,5 @@
-import { ProcessContainer } from 'pip-services-container-node';
-import { DefaultRpcFactory } from 'pip-services-rpc-node';
+import { ProcessContainer } from 'pip-services3-container-node';
+import { DefaultRpcFactory } from 'pip-services3-rpc-node';
 
 import {BeaconsServiceFactory} from '../build/BeaconsServiceFactory';
 

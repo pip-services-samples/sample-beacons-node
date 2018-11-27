@@ -1,17 +1,17 @@
 let _ = require('lodash');
 let async = require('async');
 
-import { FilterParams } from 'pip-services-commons-node';
-import { PagingParams } from 'pip-services-commons-node';
-import { DataPage } from 'pip-services-commons-node';
-import { ConfigParams } from 'pip-services-commons-node';
-import { IConfigurable } from 'pip-services-commons-node';
-import { Descriptor } from 'pip-services-commons-node';
-import { IReferences } from 'pip-services-commons-node';
-import { IReferenceable } from 'pip-services-commons-node';
-import { IdGenerator } from 'pip-services-commons-node';
-import { CommandSet } from 'pip-services-commons-node';
-import { ICommandable } from 'pip-services-commons-node';
+import { FilterParams } from 'pip-services3-commons-node';
+import { PagingParams } from 'pip-services3-commons-node';
+import { DataPage } from 'pip-services3-commons-node';
+import { ConfigParams } from 'pip-services3-commons-node';
+import { IConfigurable } from 'pip-services3-commons-node';
+import { Descriptor } from 'pip-services3-commons-node';
+import { IReferences } from 'pip-services3-commons-node';
+import { IReferenceable } from 'pip-services3-commons-node';
+import { IdGenerator } from 'pip-services3-commons-node';
+import { CommandSet } from 'pip-services3-commons-node';
+import { ICommandable } from 'pip-services3-commons-node';
 
 import { BeaconV1 } from '../../src/data/version1/BeaconV1';
 import { IBeaconsPersistence } from '../../src/persistence/IBeaconsPersistence';

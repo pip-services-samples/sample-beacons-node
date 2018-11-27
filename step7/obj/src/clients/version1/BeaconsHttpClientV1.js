@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const pip_services_rpc_node_1 = require("pip-services-rpc-node");
-class BeaconsHttpClientV1 extends pip_services_rpc_node_1.CommandableHttpClient {
+const pip_services3_rpc_node_1 = require("pip-services3-rpc-node");
+class BeaconsHttpClientV1 extends pip_services3_rpc_node_1.CommandableHttpClient {
     constructor() {
         super('v1/beacons');
     }

@@ -1,8 +1,8 @@
-import { FilterParams } from 'pip-services-commons-node';
-import { PagingParams } from 'pip-services-commons-node';
-import { DataPage } from 'pip-services-commons-node';
-import { DirectClient } from 'pip-services-rpc-node';
-import { Descriptor } from 'pip-services-commons-node';
+import { FilterParams } from 'pip-services3-commons-node';
+import { PagingParams } from 'pip-services3-commons-node';
+import { DataPage } from 'pip-services3-commons-node';
+import { DirectClient } from 'pip-services3-rpc-node';
+import { Descriptor } from 'pip-services3-commons-node';
 
 import { BeaconV1 } from '../../../src/data/version1/BeaconV1';
 import { IBeaconsClientV1 } from './IBeaconsClientV1';

@@ -1,7 +1,7 @@
 
-import { ConfigParams } from 'pip-services-commons-node';
-import { Descriptor } from 'pip-services-commons-node';
-import { References } from 'pip-services-commons-node';
+import { ConfigParams } from 'pip-services3-commons-node';
+import { Descriptor } from 'pip-services3-commons-node';
+import { References } from 'pip-services3-commons-node';
 
 import { BeaconsMemoryPersistence } from '../../../src/persistence/BeaconsMemoryPersistence';
 import { BeaconsController } from '../../../src/logic/BeaconsController';
