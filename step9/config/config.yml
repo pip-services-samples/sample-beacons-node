@@ -1,15 +1,15 @@
 ---
 # Container descriptor
-- descriptor: "pip-services3:context-info:default:default:1.0"
+- descriptor: "pip-services:context-info:default:default:1.0"
   name: "beacons"
   description: "Beacons microservice"
 
 # Console logger
-- descriptor: "pip-services3:logger:console:default:1.0"
+- descriptor: "pip-services:logger:console:default:1.0"
   level: "trace"
 
 # Perfomance counter that post values to log
-- descriptor: "pip-services3:counters:log:default:1.0"
+- descriptor: "pip-services:counters:log:default:1.0"
 
 {{^if MONGODB_ENABLED}}{{^if FILE_ENABLED}}
 # Memory persistence
@@ -33,7 +33,7 @@
 - descriptor: "beacons:controller:default:default:1.0"
 
 # Shared HTTP Endpoint
-- descriptor: "pip-services3:endpoint:http:default:1.0"
+- descriptor: "pip-services:endpoint:http:default:1.0"
   connection:
     protocol: http
     host: 0.0.0.0
@@ -43,7 +43,7 @@
 - descriptor: "beacons:service:http:default:1.0"
 
 # Hearbeat service
-- descriptor: "pip-services3:heartbeat-service:http:default:1.0"
+- descriptor: "pip-services:heartbeat-service:http:default:1.0"
 
 # Status service
-- descriptor: "pip-services3:status-service:http:default:1.0"
+- descriptor: "pip-services:status-service:http:default:1.0"
