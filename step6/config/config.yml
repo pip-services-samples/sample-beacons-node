@@ -11,7 +11,7 @@
 # Perfomance counter that post values to log
 - descriptor: "pip-services3:counters:log:default:1.0"
 
-{{^if MONGODB_ENABLED}}{{^if FILE_ENABLED}}
+{{^if MONGO_ENABLED}}{{^if FILE_ENABLED}}
 # Memory persistence
 - descriptor: "beacons:persistence:memory:default:1.0"
 {{/if}}{{/if}}
@@ -22,11 +22,14 @@
   path: {{FILE_PATH}}{{^if FILE_PATH}}"./data/beacons.json"{{/if}}
 {{/if}}
 
-{{#if MONGODB_ENABLED}}
+{{#if MONGO_ENABLED}}
 # MongoDb persistence
 - descriptor: "beacons:persistence:mongodb:default:1.0"
   connection:
-    uri: {{MONGODB_SERVICE_URI}}{{^if MONGODB_SERVICE_URI}}"mongodb://localhost:27017/test"{{/if}}
+    uri: {{MONGO_SERVICE_URI}}
+    host: {{MONGO_SERVICE_HOST}}{{^if MONGO_SERVICE_HOST}}"localhost"{{/if}}
+    port: {{MONGO_SERVICE_PORT}}{{^if MONGO_SERVICE_PORT}}27017{{/if}}
+    database: {{MONGO_DB}}{{^if MONGO_DB}}"test"{{/if}}
 {{/if}}
 
 # Controller
