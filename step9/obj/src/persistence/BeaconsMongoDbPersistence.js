@@ -39,7 +39,6 @@ class BeaconsMongoDbPersistence extends pip_services3_mongodb_node_1.Identifiabl
             udi: udi
         };
         this._collection.findOne(criteria, (err, item) => {
-            //this._model.findOne(criteria, (err, item) => {
             item = this.convertToPublic(item);
             if (item != null)
                 this._logger.trace(correlationId, "Found beacon by %s", udi);
