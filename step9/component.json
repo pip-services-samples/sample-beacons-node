@@ -1,6 +1,6 @@
 {
     "name": "beacons",
-    "registry": "community.cablelabs.com:4567/kyrio-g2b-docker",
+    "registry": "myRegistry:5000",
     "version": "1.0.0",
     "build": "0"
 }
