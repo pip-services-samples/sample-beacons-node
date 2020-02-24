@@ -1,3 +1,7 @@
+### With the VS Code REST Client extension, you can simply click
+### "Send Request" to test right from this page.
+### 
+
 ### heartbeat
 GET http://localhost:8080/heartbeat
 
