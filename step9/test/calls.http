@@ -1,0 +1,59 @@
+### With the VS Code REST Client extension, you can simply click
+### "Send Request" to test right from this page.
+### 
+
+### heartbeat
+GET http://localhost:8080/heartbeat
+
+### create
+POST http://localhost:8080/v1/beacons/create_beacon
+Content-Type: application/json
+
+{
+    "beacon":{
+    "id": "2",
+    "udi": "00001",
+    "type": "BeaconTypeV1.AltBeacon",
+    "site_id": "2",
+    "label": "TestBeacon2",
+    "center": { "type": "Point", "coordinates": [ 0, 0 ] },
+    "radius": 50
+    }
+}
+
+### Get
+POST http://localhost:8080/v1/beacons/get_beacons
+
+### Get
+POST http://localhost:8080/v1/beacons/get_beacon_by_id
+Content-Type: application/json
+
+{
+    "beacon_id": "2"
+}
+
+### Get by Uid
+POST http://localhost:8080/v1/beacons/get_beacon_by_udi
+Content-Type: application/json
+
+{
+    "udi": "00022"
+}
+
+### Update
+POST http://localhost:8080/v1/beacons/update_beacon
+Content-Type: application/json
+
+{
+    "beacon":{
+    "id": "2",
+    "udi": "00022",
+    "type": "BeaconTypeV1.AltBeacon3",
+    "site_id": "222",
+    "label": "TestBeacon1 with update",
+    "center": { "type": "Point", "coordinates": [ 223, 245 ] },
+    "radius": 20
+    }
+}
+
+
