@@ -39,11 +39,11 @@ suite('BeaconsMongoDbPersistence', () => {
     });
 
     test('CRUD Operations', (done) => {
-        fixture.testCrudOperations(done);
+       fixture.testCrudOperations(done);
     });
 
     test('Get with Filters', (done) => {
-        fixture.testGetWithFilters(done);
+       fixture.testGetWithFilters(done);
     });
 
 });

@@ -13,8 +13,8 @@ class BeaconsClientFactory extends pip_services3_components_node_1.Factory {
         this.registerAsType(BeaconsClientFactory.HttpClientDescriptor, BeaconsHttpClientV1_1.BeaconsHttpClientV1);
     }
 }
+exports.BeaconsClientFactory = BeaconsClientFactory;
 BeaconsClientFactory.NullClientDescriptor = new pip_services3_commons_node_1.Descriptor('beacons', 'client', 'null', '*', '1.0');
 BeaconsClientFactory.DirectClientDescriptor = new pip_services3_commons_node_1.Descriptor('beacons', 'client', 'direct', '*', '1.0');
 BeaconsClientFactory.HttpClientDescriptor = new pip_services3_commons_node_1.Descriptor('beacons', 'client', 'http', '*', '1.0');
-exports.BeaconsClientFactory = BeaconsClientFactory;
 //# sourceMappingURL=BeaconsClientFactory.js.map
