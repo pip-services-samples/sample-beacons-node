@@ -1,6 +1,6 @@
 # Sample Beacons microservice in Node.js
 
-This sample demonstrates how to develop and dockerize a microservice in Node.js using [Pip.Services](http://github.com/pip-services/pip-services) toolkit.
+This sample demonstrates how to develop and dockerize a microservice in Node.js using [Pip.Services](http://www.pipservices.org) toolkit.
 
 The is simple a microservice that does couple things:
 * Keeps list of beacons with their IDs and locations
@@ -12,7 +12,7 @@ The is simple a microservice that does couple things:
 
 To write the code we are going to use Pip.Services cross-language and cross-platform microservices toolkit.
 If you are interested to learn more about Pip.Services, please,
-go to [http://github.com/pip-services/pip-services](http://github.com/pip-services/pip-services).
+go to [http://www.pipservices.org](http://www.pipservices.org).
 
 The microservice has the following design:
 
