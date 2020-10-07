@@ -8,14 +8,14 @@ import { IdentifiableMongoDbPersistence } from 'pip-services3-mongodb-node';
 
 import { BeaconV1 } from '../data/version1/BeaconV1';
 import { IBeaconsPersistence } from './IBeaconsPersistence';
-import { BeaconsMongoDbSchema } from './BeaconsMongoDbSchema';
 
 export class BeaconsMongoDbPersistence
     extends IdentifiableMongoDbPersistence<BeaconV1, string>
     implements IBeaconsPersistence {
 
     constructor() {
-        super('beacons', BeaconsMongoDbSchema());
+        super('beacons');
+        this.ensureIndex({ site_id: 1 });
         this._maxPageSize = 1000;
     }
 
@@ -62,8 +62,8 @@ export class BeaconsMongoDbPersistence
             udi: udi
         };
 
-        this._model.findOne(criteria, (err, item) => {
-            item = this.convertFromPublic(item);
+        this._collection.findOne(criteria, (err, item) => {
+            item = this.convertToPublic(item);
 
             if (item != null) this._logger.trace(correlationId, "Found beacon by %s", udi);
             else this._logger.trace(correlationId, "Cannot find beacon by %s", udi);

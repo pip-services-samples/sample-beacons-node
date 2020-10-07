@@ -17,10 +17,10 @@ class BeaconsServiceFactory extends pip_services3_components_node_1.Factory {
         this.registerAsType(BeaconsServiceFactory.HttpServiceV1Descriptor, BeaconsHttpServiceV1_1.BeaconsHttpServiceV1);
     }
 }
+exports.BeaconsServiceFactory = BeaconsServiceFactory;
 BeaconsServiceFactory.MemoryPersistenceDescriptor = new pip_services3_commons_node_1.Descriptor('beacons', 'persistence', 'memory', '*', '1.0');
 BeaconsServiceFactory.FilePersistenceDescriptor = new pip_services3_commons_node_1.Descriptor('beacons', 'persistence', 'file', '*', '1.0');
 BeaconsServiceFactory.MongoDbPersistenceDescriptor = new pip_services3_commons_node_1.Descriptor('beacons', 'persistence', 'mongodb', '*', '1.0');
 BeaconsServiceFactory.ControllerDescriptor = new pip_services3_commons_node_1.Descriptor('beacons', 'controller', 'default', '*', '1.0');
 BeaconsServiceFactory.HttpServiceV1Descriptor = new pip_services3_commons_node_1.Descriptor('beacons', 'service', 'http', '*', '1.0');
-exports.BeaconsServiceFactory = BeaconsServiceFactory;
 //# sourceMappingURL=BeaconsServiceFactory.js.map

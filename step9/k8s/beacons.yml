@@ -14,7 +14,7 @@ spec:
  selector:
    app: beacons
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: beacons-deploy
@@ -23,25 +23,22 @@ spec:
   minReadySeconds: 5
   strategy:
     type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 1
-      maxSurge: 1
   template:
     metadata:
       labels:
         app: beacons
-    spec: 
+    spec:
       containers:
-      - name: beacons-pod
-        image: myregistry:5000/beacons:latest
-        imagePullPolicy: Never
-        ports:
-        - containerPort: 8080
-        env:
-        - name: ENVIRONMENT
-          valueFrom:
-            configMapKeyRef:
-              name: config
-              key: environment
-        - name: MONGO_ENABLED
-          value: "true"
+        - name: beacons-pod
+          image: myregistry:5000/beacons:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          env:
+            - name: ENVIRONMENT
+              valueFrom:
+                configMapKeyRef:
+                  name: config
+                  key: environment
+            - name: MONGO_ENABLED
+              value: "true"
